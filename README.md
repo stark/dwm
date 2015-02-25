@@ -4,6 +4,18 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 **dwm version:** 6.1
 
+**See suckless commit:** [35db6d8afc3fd9f80166feac6c1e4adf71d553c3](http://git.suckless.org/dwm/commit/?id=35db6d8afc3fd9f80166feac6c1e4adf71d553c3)
+
+Patches Applied
+---------------
+**Total Patches Applied:** 19 Patches
+
+**Git apply**			 : 7 Patches
+
+**Manually Patched**	 : 12 Patches
+
+For more information on which patches are applied please **see** [dwm-patches](https://github.com/gstk/dwm-patches)
+
 Requirements
 ------------
 In order to build dwm you need the Xlib header files.
@@ -50,11 +62,3 @@ Configuration
 -------------
 The configuration of dwm is done by creating a custom config.h
 and (re)compiling the source code.
-
-
-Patches Applied
----------------
-Total Patches Applied: 19
-
-Git apply			 : 7
-Manually Patched	 : 12
