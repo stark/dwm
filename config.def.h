@@ -158,28 +158,28 @@ static Key keys[] = {
 	{ MODKEY|HYPKEY,                XK_k,              explace,                {.ui = EX_N  }},		/* Teleport Window to the  Top    Center	*/
 	{ MODKEY|HYPKEY,                XK_o,              explace,                {.ui = EX_NE }},		/* Teleport Window to the  Top    Right		*/
 	{ MODKEY|HYPKEY,                XK_h,              explace,                {.ui = EX_W  }},		/* Teleport Window to the  Middle Left		*/
-	{ MODKEY|HYPKEY,                XK_m,              explace,                {.ui = EX_C  }},		/* Teleport Window to the  Middle Center	*/
+	{ MODKEY|HYPKEY,                XK_a,              explace,                {.ui = EX_C  }},		/* Teleport Window to the  Middle Center	*/
 	{ MODKEY|HYPKEY,                XK_l,              explace,                {.ui = EX_E  }},		/* Teleport Window to the  Middle Right		*/
-	{ MODKEY|HYPKEY,                XK_u,              explace,                {.ui = EX_SW }},		/* Teleport Window to the  Bottom Left		*/
+	{ MODKEY|HYPKEY,                XK_n,              explace,                {.ui = EX_SW }},		/* Teleport Window to the  Bottom Left		*/
 	{ MODKEY|HYPKEY,                XK_j,              explace,                {.ui = EX_S  }},		/* Teleport Window to the  Bottom Center	*/
-	{ MODKEY|HYPKEY,                XK_p,              explace,                {.ui = EX_SE }},		/* Teleport Window to the  Bottom Right		*/
+	{ MODKEY|HYPKEY,                XK_m,              explace,                {.ui = EX_SE }},		/* Teleport Window to the  Bottom Right		*/
 
 	{ HYPKEY|ShiftMask,             XK_k,              exresize,               {.v = (int []){   0,  25 }}},
 	{ HYPKEY|ShiftMask,             XK_j,              exresize,               {.v = (int []){   0, -25 }}},
 	{ HYPKEY|ShiftMask,             XK_l,              exresize,               {.v = (int []){  25,   0 }}},
 	{ HYPKEY|ShiftMask,             XK_h,              exresize,               {.v = (int []){ -25,   0 }}},
-	{ HYPKEY|ShiftMask,             XK_m,              exresize,               {.v = (int []){  25,  25 }}},
-	{ HYPKEY|ShiftMask|ControlMask, XK_m,              exresize,               {.v = (int []){ -25, -25 }}},
+	{ HYPKEY|ShiftMask,             XK_a,              exresize,               {.v = (int []){  25,  25 }}},
+	{ HYPKEY|ShiftMask|ControlMask, XK_a,              exresize,               {.v = (int []){ -25, -25 }}},
 
 	{ HYPKEY|ALTKEY,                XK_l,              togglehorizontalexpand, {.i = +1} },
-	{ HYPKEY|ALTKEY,                XK_p,              togglehorizontalexpand, {.i =  0} },
+	{ HYPKEY|ALTKEY,                XK_m,              togglehorizontalexpand, {.i =  0} },
 	{ HYPKEY|ALTKEY,                XK_h,              togglehorizontalexpand, {.i = -1} },
 	{ HYPKEY|ALTKEY,                XK_k,              toggleverticalexpand,   {.i = +1} },
-	{ HYPKEY|ALTKEY,                XK_u,              toggleverticalexpand,   {.i =  0} },
+	{ HYPKEY|ALTKEY,                XK_n,              toggleverticalexpand,   {.i =  0} },
 	{ HYPKEY|ALTKEY,                XK_j,              toggleverticalexpand,   {.i = -1} },
 	{ HYPKEY|ALTKEY,                XK_i,              togglemaximize,         {.i = -1} },
 	{ HYPKEY|ALTKEY,                XK_o,              togglemaximize,         {.i = +1} },
-	{ HYPKEY|ALTKEY,                XK_m,              togglemaximize,         {.i =  0} },
+	{ HYPKEY|ALTKEY,                XK_a,              togglemaximize,         {.i =  0} },
 
 	/* End of functions provided by dwm-r1606-exresize.diff */
 
