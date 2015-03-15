@@ -9,10 +9,10 @@ static const char normfgcolor[]     = "#695C54";
 static const char selbordercolor[]  = "#E5E5E5";
 static const char selbgcolor[]      = "#09090d";
 static const char selfgcolor[]      = "#9b9081";
-static const unsigned int borderpx  = 3;           /* border pixel of windows */
-static const unsigned int snap      = 0;           /* snap pixel */
-static const unsigned int systraypinning = 0;      /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 2;      /* systray spacing */
+static const unsigned int borderpx  = 3;            /* border pixel of windows */
+static const unsigned int snap      = 0;            /* snap pixel */
+static const unsigned int systraypinning = 0;       /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systrayspacing = 2;       /* systray spacing */
 static const Bool systraypinningfailfirst = True;   /* True: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const Bool showsystray       = True;         /* False means no systray */
 static const Bool showbar           = True;         /* False means no bar */
@@ -39,12 +39,11 @@ static const Rule rules[] = {
 	{ "URxvt",                    NULL,       NULL,                          1 << 0,         True,                    False,        -1 },
 	{ "URxvt",                    NULL,       "htop",                        1 << 0,        False,                     True,        -1 },
 	{ "URxvt",                    NULL,       "ncmpcpp",                     1 << 0,         True,                     True,        -1 },
-	{ "XTerm",                    NULL,       NULL,                          1 << 0,        False,                    False,       - 1 },
-	{ "Thunar",                   NULL,       NULL,                          1 << 3,        False,                    False,       - 1 },
+	{ "XTerm",                    NULL,       NULL,                          1 << 0,        False,                    False,        -1 },
+	{ "Thunar",                   NULL,       NULL,                          1 << 3,        False,                    False,        -1 },
 	{ "Thunar",                   NULL,       "File Operation Progress",     1 << 3,        False,                     True,        -1 },
 	{ "Emacs",                    NULL,       NULL,                          1 << 2,        False,                    False,        -1 },
 	{ "Chromium",                 NULL,       NULL,                          1 << 1,        False,                    False,        -1 },
-	{ "Uzbl-core",                NULL,       NULL,                          1 << 1,        False,                    False,        -1 },
 	{ "Ario",                     NULL,       NULL,                          1 << 4,         True,                     True,        -1 },
 	{ "fontforge",                NULL,       NULL,                          1 << 8,        False,                     True,        -1 },
 	{ "Gbdfed",                   NULL,       NULL,                          1 << 8,         True,                     True,        -1 },
@@ -68,12 +67,12 @@ static const Bool resizehints = True; /* True means respect size hints in tiled 
 #include "exresize.c"
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "\uE000",      monocle },    /* first entry is default */
-	{ "\uE0B1",      NULL },    /* no layout function means floating behavior */
-	{ "\uE003",      bstack },
-	{ "\uE002",      tile },
-	{ "[V]",      bstackhoriz },
-	{ "[D]",      deck },
+	{ "\uE000",    monocle },    /* first entry is default */
+	{ "\uE0B1",    NULL },    /* no layout function means floating behavior */
+	{ "\uE003",    bstack },
+	{ "\uE002",    tile },
+	{ "[V]",       bstackhoriz },
+	{ "[D]",       deck },
 };
 
 /* key definitions */
@@ -81,8 +80,8 @@ static const Layout layouts[] = {
 #define HYPKEY Mod3Mask
 #define ALTKEY Mod1Mask
 #define TAGKEYS(KEY,TAG) \
-	{ MODKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
-	{ HYPKEY,                       KEY,      toggleview,     {.ui = 1 << TAG} }, \
+	{ HYPKEY,                       KEY,      view,           {.ui = 1 << TAG} }, \
+	{ MODKEY,                       KEY,      toggleview,     {.ui = 1 << TAG} }, \
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 
