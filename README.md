@@ -8,9 +8,9 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 Patches Applied
 ---------------
-**Total Patches Applied:** 19 Patches
+**Total Patches Applied:** 18 Patches
 
-**Git apply**			 : 7 Patches
+**Git apply**			 : 6 Patches
 
 **Manually Patched**	 : 12 Patches
 

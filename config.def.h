@@ -59,8 +59,6 @@ static const float mfact      = 0.55; /* factor of master area size [0.05..0.95]
 static const int nmaster      = 1;    /* number of clients in master area */
 static const Bool resizehints = True; /* True means respect size hints in tiled resizals */
 
-#include "bstack.c"
-#include "bstackhoriz.c"
 #include "push.c"
 #include "focusmaster.c"
 #include "toggleview_focus.c"
@@ -69,9 +67,7 @@ static const Layout layouts[] = {
 	/* symbol     arrange function */
 	{ "\uE000",    monocle },    /* first entry is default */
 	{ "\uE0B1",    NULL },    /* no layout function means floating behavior */
-	{ "\uE003",    bstack },
 	{ "\uE002",    tile },
-	{ "[V]",       bstackhoriz },
 	{ "[D]",       deck },
 };
 
@@ -115,9 +111,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_h,              setmfact,               {.f = -0.05} },
 	{ MODKEY,                       XK_l,              setmfact,               {.f = +0.05} },
 
-	{ MODKEY|ShiftMask,             XK_h,              setcfact,               {.f = +0.25} },		/* Works with Tile Layout only		requires: dwm-6.1-cfacts.diff ( hand patched ) */
-	{ MODKEY|ShiftMask,             XK_l,              setcfact,               {.f = -0.25} },		/* Works with Tile Layout only */
-	{ MODKEY|ShiftMask,             XK_o,              setcfact,               {.f =  0.00} },		/* Works with Tile Layout only */
+	{ MODKEY|ShiftMask,             XK_h,              setcfact,               {.f = +0.25} },		/* Applies to Tile Layout only		requires: dwm-6.1-cfacts.diff ( hand patched ) */
+	{ MODKEY|ShiftMask,             XK_l,              setcfact,               {.f = -0.25} },		/* Applies to Tile Layout only */
+	{ MODKEY|ShiftMask,             XK_o,              setcfact,               {.f =  0.00} },		/* Applies to Tile Layout only */
 
 	{ MODKEY,                       XK_Return,         zoom,                   {0} },				/* Swap Master */
 	{ MODKEY,                       XK_Tab,            view,                   {0} },				/* Toggle between Current and previously active tag */
@@ -125,10 +121,8 @@ static Key keys[] = {
 
 	{ MODKEY|ShiftMask,             XK_m,              setlayout,              {.v = &layouts[0]} },	/*  Monocle      */
 	{ MODKEY|ShiftMask,             XK_f,              setlayout,              {.v = &layouts[1]} },	/*  Float        */
-	{ MODKEY|ShiftMask,             XK_b,              setlayout,              {.v = &layouts[2]} },	/*  Bstack       */
-	{ MODKEY|ShiftMask,             XK_t,              setlayout,              {.v = &layouts[3]} },	/*  Tile         */
-	{ MODKEY|ShiftMask,             XK_v,              setlayout,              {.v = &layouts[4]} },	/*  Bstack-horiz */
-	{ MODKEY|ShiftMask,             XK_d,              setlayout,              {.v = &layouts[5]} },	/*  Deck         */
+	{ MODKEY|ShiftMask,             XK_t,              setlayout,              {.v = &layouts[2]} },	/*  Tile         */
+	{ MODKEY|ShiftMask,             XK_d,              setlayout,              {.v = &layouts[3]} },	/*  Deck         */
 
 	{ MODKEY|ShiftMask,             XK_j,              pushdown,               {0} },
 	{ MODKEY|ShiftMask,             XK_k,              pushup,                 {0} },
